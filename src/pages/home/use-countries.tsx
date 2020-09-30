@@ -13,7 +13,6 @@ interface CountriesType {
 const INITIAL_STATE = {
   countries: [],
   loading: false,
-  search: undefined,
 };
 
 export function useCountries() {
