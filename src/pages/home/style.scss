@@ -1,0 +1,10 @@
+.home {
+  display: grid;
+  gap: 80px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+  margin-top: 45px;
+
+  &__input {
+    width: 480px;
+  }
+}
