@@ -6,7 +6,7 @@ import Country from "pages/country";
 
 export default function Routes() {
   return (
-    <Router>
+    <Router basename="/react-countries-challenger">
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/country" component={Country} />
