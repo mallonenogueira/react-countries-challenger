@@ -1,0 +1,25 @@
+.input-search {
+  align-items: center;
+  background-color: var(--elements_color);
+  border-radius: 5px;
+  box-shadow: var(--input-box-shadow);
+  display: flex;
+  height: 55px;
+  padding: 0 35px;
+
+  &__icon {
+    color: var(--input_color);
+  }
+
+  &__element {
+    background-color: var(--elements_color);
+    border: 0;
+    color: var(--input_color);
+    flex: 1;
+    font-size: 14px;
+    font-weight: var(--font-weight-regular);
+    height: 100%;
+    padding: 0 20px;
+    outline: 0;
+  }
+}
