@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "25ea3d6fc81d67bf88a2cdee7585bd53",
+    "revision": "f28ee2b336d71b88cd6e53607217c020",
     "url": "/react-countries-challenger/index.html"
   },
   {
-    "revision": "7293cc9257113c60ec12",
+    "revision": "f2b379b2ec0a066c4276",
     "url": "/react-countries-challenger/static/css/2.641464e6.chunk.css"
   },
   {
-    "revision": "2f0a4c2aaac868dda7a9",
+    "revision": "03cac8f62012bb4333f6",
     "url": "/react-countries-challenger/static/css/main.d10374fc.chunk.css"
   },
   {
-    "revision": "7293cc9257113c60ec12",
-    "url": "/react-countries-challenger/static/js/2.85e4cf1c.chunk.js"
+    "revision": "f2b379b2ec0a066c4276",
+    "url": "/react-countries-challenger/static/js/2.599e9520.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/react-countries-challenger/static/js/2.85e4cf1c.chunk.js.LICENSE.txt"
+    "url": "/react-countries-challenger/static/js/2.599e9520.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2f0a4c2aaac868dda7a9",
-    "url": "/react-countries-challenger/static/js/main.e8eedda8.chunk.js"
+    "revision": "03cac8f62012bb4333f6",
+    "url": "/react-countries-challenger/static/js/main.d56fa66e.chunk.js"
   },
   {
     "revision": "906e38c40a39b96899ee",
