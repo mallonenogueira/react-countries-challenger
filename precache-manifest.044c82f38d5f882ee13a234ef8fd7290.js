@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0b3cfe1d6388b833019435b11878d684",
+    "revision": "d961e29ef1c23da71770d8a2b423a696",
     "url": "/react-countries-challenger/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-countries-challenger/static/css/2.641464e6.chunk.css"
   },
   {
-    "revision": "91b27b4af9d8724f80dd",
+    "revision": "c9566ca136682852c183",
     "url": "/react-countries-challenger/static/css/main.46b34490.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-countries-challenger/static/js/2.93d0dd31.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "91b27b4af9d8724f80dd",
-    "url": "/react-countries-challenger/static/js/main.8aee32ba.chunk.js"
+    "revision": "c9566ca136682852c183",
+    "url": "/react-countries-challenger/static/js/main.f72e7137.chunk.js"
   },
   {
     "revision": "906e38c40a39b96899ee",

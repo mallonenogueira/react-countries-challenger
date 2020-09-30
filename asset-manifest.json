@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-countries-challenger/static/css/main.46b34490.chunk.css",
-    "main.js": "/react-countries-challenger/static/js/main.8aee32ba.chunk.js",
-    "main.js.map": "/react-countries-challenger/static/js/main.8aee32ba.chunk.js.map",
+    "main.js": "/react-countries-challenger/static/js/main.f72e7137.chunk.js",
+    "main.js.map": "/react-countries-challenger/static/js/main.f72e7137.chunk.js.map",
     "runtime-main.js": "/react-countries-challenger/static/js/runtime-main.842474a0.js",
     "runtime-main.js.map": "/react-countries-challenger/static/js/runtime-main.842474a0.js.map",
     "static/css/2.641464e6.chunk.css": "/react-countries-challenger/static/css/2.641464e6.chunk.css",
     "static/js/2.93d0dd31.chunk.js": "/react-countries-challenger/static/js/2.93d0dd31.chunk.js",
     "static/js/2.93d0dd31.chunk.js.map": "/react-countries-challenger/static/js/2.93d0dd31.chunk.js.map",
     "index.html": "/react-countries-challenger/index.html",
-    "precache-manifest.634981c1c3b30fb4eb598aa3134786c3.js": "/react-countries-challenger/precache-manifest.634981c1c3b30fb4eb598aa3134786c3.js",
+    "precache-manifest.044c82f38d5f882ee13a234ef8fd7290.js": "/react-countries-challenger/precache-manifest.044c82f38d5f882ee13a234ef8fd7290.js",
     "service-worker.js": "/react-countries-challenger/service-worker.js",
     "static/css/2.641464e6.chunk.css.map": "/react-countries-challenger/static/css/2.641464e6.chunk.css.map",
     "static/css/main.46b34490.chunk.css.map": "/react-countries-challenger/static/css/main.46b34490.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.641464e6.chunk.css",
     "static/js/2.93d0dd31.chunk.js",
     "static/css/main.46b34490.chunk.css",
-    "static/js/main.8aee32ba.chunk.js"
+    "static/js/main.f72e7137.chunk.js"
   ]
 }
