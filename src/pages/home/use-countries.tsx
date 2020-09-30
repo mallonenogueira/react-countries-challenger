@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 
 import Country from "services/country/model";
 import CountryService from "services/country/service";
@@ -17,11 +17,9 @@ const INITIAL_STATE = {
   search: undefined,
 };
 
-export function useCountries(props: { search: string }) {
-  const [state, setState] = useState<CountriesType>({
-    ...INITIAL_STATE,
-    ...props,
-  });
+export function useCountries() {
+  const [state, setState] = useState<CountriesType>(INITIAL_STATE);
+  const controllerRef = useRef<AbortController | null>(null);
 
   const setLoading = useCallback((loading) => {
     setState((data) => ({ ...data, loading }));
@@ -37,21 +35,30 @@ export function useCountries(props: { search: string }) {
 
   const makeSearch = useCallback(
     (search?: string) => {
+      controllerRef.current?.abort();
+      controllerRef.current = new AbortController();
+      const options = {
+        signal: controllerRef.current.signal,
+      };
+
+      const handleRequest = (request: Promise<Country[]>) => {
+        request
+          .then(setCountries)
+          .then(() => (controllerRef.current = null))
+          .catch(() => setCountries([]));
+      };
+
       setLoading(true);
       setSearch(search);
 
       if (search) {
-        service.findByName(search).then(setCountries);
+        handleRequest(service.findByName(search, options));
       } else {
-        service.findAll().then(setCountries);
+        handleRequest(service.findAll(options));
       }
     },
     [setCountries, setLoading, setSearch]
   );
-
-  useEffect(() => {
-    makeSearch();
-  }, [makeSearch]);
 
   return {
     state,

@@ -14,7 +14,12 @@ interface Props {
   makeSearch: (search?: string) => void;
 }
 
-export default function Home({ search, countries, makeSearch }: Props) {
+export default function Home({
+  search,
+  loading,
+  countries,
+  makeSearch,
+}: Props) {
   return (
     <div>
       <Header />
@@ -27,12 +32,32 @@ export default function Home({ search, countries, makeSearch }: Props) {
           onChange={(event) => makeSearch(event.target.value)}
         />
 
-        <div className="home">
-          {countries.map((country) => (
-            <CountryCard key={country.name} {...country} />
-          ))}
-        </div>
+        {buildContent(loading, countries)}
       </Container>
+    </div>
+  );
+}
+
+function buildContent(loading: boolean, countries: Country[]) {
+  if (loading) {
+    return <div className="home--loading">Loading...</div>;
+  }
+
+  if (!countries.length) {
+    return (
+      <div className="home--not-found">
+        <div>
+          No countries found <strong>:(</strong>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="home">
+      {countries.map((country) => (
+        <CountryCard key={country.name} {...country} />
+      ))}
     </div>
   );
 }

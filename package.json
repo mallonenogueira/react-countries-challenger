@@ -5,6 +5,7 @@
   "homepage": "http://mallonenogueira.github.io/react-countries-challenger",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.0",
+    "query-string": "^6.13.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",

@@ -8,4 +8,15 @@
     width: 100%;
     max-width: 480px;
   }
+
+  &--loading,
+  &--not-found {
+    color: var(--text_color);
+    font-size: 24px;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    transform: translate3d(-50%, -50%, 0);
+    top: 50%;
+  }
 }
