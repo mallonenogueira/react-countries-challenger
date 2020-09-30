@@ -8,7 +8,6 @@ const service = new CountryService();
 interface CountriesType {
   countries: Country[];
   loading: boolean;
-  search?: string;
 }
 
 const INITIAL_STATE = {
@@ -29,10 +28,6 @@ export function useCountries() {
     setState((data) => ({ ...data, loading: false, countries }));
   }, []);
 
-  const setSearch = useCallback((search) => {
-    setState((data) => ({ ...data, search }));
-  }, []);
-
   const makeSearch = useCallback(
     (search?: string) => {
       controllerRef.current?.abort();
@@ -49,7 +44,6 @@ export function useCountries() {
       };
 
       setLoading(true);
-      setSearch(search);
 
       if (search) {
         handleRequest(service.findByName(search, options));
@@ -57,11 +51,12 @@ export function useCountries() {
         handleRequest(service.findAll(options));
       }
     },
-    [setCountries, setLoading, setSearch]
+    [setCountries, setLoading]
   );
 
   return {
     state,
     makeSearch,
+    setLoading,
   };
 }
