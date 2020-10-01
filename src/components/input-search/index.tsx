@@ -4,7 +4,7 @@ import "./style.scss";
 
 export default function InputSearch({
   placeholder,
-  className,
+  className = "",
   value,
   onChange,
 }: {
@@ -14,7 +14,7 @@ export default function InputSearch({
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }) {
   return (
-    <label className={`input-search ${className || ""}`}>
+    <label className={`input-search ${className}`}>
       <i className="fas fa-search input-search__icon"></i>
       <input
         placeholder={placeholder}

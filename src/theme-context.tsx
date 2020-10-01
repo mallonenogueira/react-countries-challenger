@@ -1,6 +1,7 @@
 import React, {
   createContext,
   useCallback,
+  useContext,
   useEffect,
   useMemo,
   useState,
@@ -11,6 +12,8 @@ export const ThemeContext = createContext({
   theme: "light",
   toggleDarkTheme: () => {},
 });
+
+export const useThemeContext = () => useContext(ThemeContext);
 
 export function ThemeProvider({ children }: withChildren) {
   const [theme, setTheme] = useState({

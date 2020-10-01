@@ -23,22 +23,24 @@ export default function CountryCard({
       <div className="country-card__content">
         <h2 className="country-card__title">{name}</h2>
 
-        <div>
-          <span className="country-card__label">Population: </span>
-          <span className="country-card__value">
-            {formatPopulation(population)}
-          </span>
-        </div>
+        <ul>
+          <li>
+            <span className="country-card__label">Population: </span>
+            <span className="country-card__value">
+              {formatPopulation(population)}
+            </span>
+          </li>
 
-        <div>
-          <span className="country-card__label">Region: </span>
-          <span className="country-card__value">{region}</span>
-        </div>
+          <li>
+            <span className="country-card__label">Region: </span>
+            <span className="country-card__value">{region}</span>
+          </li>
 
-        <div>
-          <span className="country-card__label">Capital: </span>
-          <span className="country-card__value">{capital}</span>
-        </div>
+          <li>
+            <span className="country-card__label">Capital: </span>
+            <span className="country-card__value">{capital}</span>
+          </li>
+        </ul>
       </div>
     </div>
   );

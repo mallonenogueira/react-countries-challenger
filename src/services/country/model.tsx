@@ -3,6 +3,5 @@ export default interface Country {
   capital: string;
   region: string;
   population: number;
-  nativeName: string;
   flag: string;
 }
