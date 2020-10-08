@@ -5,7 +5,7 @@ interface Options {
   signal?: AbortSignal;
 }
 
-export default class CountryService {
+class CountryService {
   async findAll(options?: Options) {
     const { data } = await api.get<Country[]>(
       "https://restcountries.eu/rest/v2/all",
@@ -22,3 +22,5 @@ export default class CountryService {
     return data;
   }
 }
+
+export default new CountryService();

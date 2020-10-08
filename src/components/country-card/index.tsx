@@ -3,10 +3,6 @@ import Country from "services/country/model";
 
 import "./style.scss";
 
-function formatPopulation(population: number) {
-  return population.toLocaleString();
-}
-
 export default function CountryCard({
   name,
   flag,
@@ -17,7 +13,7 @@ export default function CountryCard({
   return (
     <div key={name} className="country-card">
       <div className="country-card__image">
-        <img src={flag} alt={`${name} flag`} />
+        <img loading="lazy" src={flag} alt={`${name} flag`} />
       </div>
 
       <div className="country-card__content">
@@ -27,7 +23,7 @@ export default function CountryCard({
           <li>
             <span className="country-card__label">Population: </span>
             <span className="country-card__value">
-              {formatPopulation(population)}
+              {population.toLocaleString()}
             </span>
           </li>
 

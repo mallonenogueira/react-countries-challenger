@@ -1,11 +1,9 @@
 import { useCallback, useRef, useState } from "react";
 
 import Country from "services/country/model";
-import CountryService from "services/country/service";
+import service from "services/country/service";
 
-const service = new CountryService();
-
-interface CountriesType {
+export interface CountriesType {
   countries: Country[];
   loading: boolean;
 }
@@ -15,7 +13,13 @@ const INITIAL_STATE = {
   loading: false,
 };
 
-export function useCountries() {
+export interface useCountriesReturn {
+  state: CountriesType;
+  makeSearch: (search?: string | undefined) => Promise<void>;
+  setLoading: (loading: any) => void;
+}
+
+export function useCountries(): useCountriesReturn {
   const [state, setState] = useState<CountriesType>(INITIAL_STATE);
   const controllerRef = useRef<AbortController | null>(null);
 
@@ -28,7 +32,7 @@ export function useCountries() {
   }, []);
 
   const makeSearch = useCallback(
-    (search?: string) => {
+    async (search?: string) => {
       controllerRef.current?.abort();
       controllerRef.current = new AbortController();
       const options = {
@@ -45,9 +49,9 @@ export function useCountries() {
       setLoading(true);
 
       if (search) {
-        handleRequest(service.findByName(search, options));
+        await handleRequest(service.findByName(search, options));
       } else {
-        handleRequest(service.findAll(options));
+        await handleRequest(service.findAll(options));
       }
     },
     [setCountries, setLoading]
