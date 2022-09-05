@@ -17,8 +17,8 @@ jobs:
       - name: Clean build folder
         run: rm -rf build
 
-      - name: Npm install
-        run: npm install
+      - name: Yarn
+        run: yarn
   
       - name: Npm build
         run: npm run build
