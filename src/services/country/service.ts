@@ -8,7 +8,7 @@ interface Options {
 class CountryService {
   async findAll(options?: Options) {
     const { data } = await api.get<Country[]>(
-      "https://restcountries.eu/rest/v2/all",
+      "https://restcountries.com/v2/all",
       options
     );
     return data;
@@ -16,7 +16,7 @@ class CountryService {
 
   async findByName(name: string, options?: Options) {
     const { data } = await api.get<Country[]>(
-      `https://restcountries.eu/rest/v2/name/${name}`,
+      `https://restcountries.com/v2/name/${name}`,
       options
     );
     return data;
